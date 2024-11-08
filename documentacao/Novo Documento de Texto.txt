@@ -1,0 +1,78 @@
+# Odontologia App
+
+## Integrantes do Projeto
+- Lorenzo Augusto - RM 553941
+- Vinicius Maia - RM 552969
+- Jose Alexandre - RM 553973
+
+## Documentação do Projeto
+
+### Descrição
+O **Odontologia App** é uma aplicação web desenvolvida em Java utilizando Spring Boot. Esta documentação fornece informações sobre a estrutura do projeto, funcionalidades, configurações e melhores práticas utilizadas durante o desenvolvimento.
+
+### Estrutura do Projeto
+O projeto segue a seguinte estrutura modular:
+
+- **src/main/java/com/example/odontologyapp/**:
+  - **model/**: Classes de entidade
+  - **repository/**: Interfaces de repository
+  - **service/**: Serviços de negócios
+  - **controller/**: Controladores RESTful
+  - **config/**: Configurações da aplicação
+
+### Funcionalidades Principais
+#### Gerenciamento de Pacientes
+- Criar, ler, atualizar e excluir pacientes
+- Buscar pacientes por ID
+- Listar pacientes paginados
+
+#### Gerenciamento de Consultas
+- Associar consultas a pacientes
+- Registrar datas de consultas
+- Buscar consultas por paciente
+
+#### Gerenciamento de Sinistros
+- Criar, ler, atualizar e excluir sinistros
+- Associar sinistros a pacientes
+- Armazenar imagens associadas aos sinistros
+
+### Configurações
+#### Banco de Dados
+A aplicação utiliza um banco de dados relacional (preferencialmente Oracle). As configurações de conexão estão localizadas no arquivo `application.properties`.
+
+#### Logging
+Utiliza SLF4J com Logback para logging eficiente.
+
+#### Segurança
+Implementa práticas de segurança básicas, incluindo autenticação e autorização simples.
+
+#### Testes
+Inclui testes unitários e de integração utilizando JUnit e Mockito.
+
+### Melhores Práticas Adotadas
+- **Modularidade**: O projeto segue uma estrutura modular, facilitando manutenção e escalabilidade.
+- **Dependency Management**: Utiliza o gerenciamento de dependências do Maven.
+- **Configuração Externa**: Propriedades da aplicação são armazenadas em arquivos externos (`application.properties`).
+- **Logging Eficiente**: Utiliza SLF4J com Logback para logging estruturado.
+- **Tratamento de Exceções**: Implementa tratamento centralizado de exceções usando `@ControllerAdvice`.
+- **Interfacing com Banco de Dados**: Utiliza Spring Data JPA para interações com o banco de dados.
+- **Segurança Básica**: Implementa autenticação e autorização simples.
+- **Testes**: Inclui testes unitários e de integração.
+- **Monitoramento de Desempenho**: Utiliza Spring Boot Actuator para endpoints de monitoramento.
+- **Documentação**: Gera documentação automática das APIs RESTful.
+
+### Diagramas de Entidade e Relacionamento (DER)
+O DER mostra as principais entidades do sistema: Paciente, Consulta e Sinistro. Os relacionamentos entre essas entidades são mostrados, incluindo associações de muito-para-muito.
+
+### Arquitetura
+A aplicação segue os princípios RESTful criados por Roy Fielding. Ela é capaz de persistir, alterar e consultar dados em um SGBD Relacional, preferencialmente Oracle.
+
+### Nível de Maturidade da API
+A aplicação atende ao modelo de maturidade nível 1 proposto por Leonard Richardson, seguindo os princípios RESTful básicos.
+
+### Evolução do Projeto
+O projeto evoluiu desde o arquivo anterior gerado, incorporando novas funcionalidades, melhorias na estrutura e adesão a melhores práticas de desenvolvimento Spring Boot.
+
+---
+Este documento fornece uma visão geral do **Odontologia App**, incluindo sua arquitetura, funcionalidades principais, configurações e práticas adotadas durante seu desenvolvimento. Ele serve como referência para futuras manutenções e expansões do sistema.
+
